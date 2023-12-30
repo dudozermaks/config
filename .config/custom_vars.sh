@@ -1,3 +1,4 @@
+#! /usr/bin/env bash
 PC_HOSTNAME="DM"
 NOTEBOOK_HOSTNAME="DMnotebook"
 HOSTNAME=$(cat /proc/sys/kernel/hostname)
