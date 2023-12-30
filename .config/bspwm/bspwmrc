@@ -21,6 +21,6 @@ bspc rule -a Spotify desktop='^9'
 bspc rule -a Pavucontrol state='floating'
 
 /home/maks/shit/ss.sh &
-feh --bg-fill ~/.config/wallpapers.webp &
+feh --bg-fill ~/.config/wallpapers.png &
 /home/maks/.config/polybar/polybar.sh
 setxkbmap -layout us,ru -option grp:win_space_toggle
