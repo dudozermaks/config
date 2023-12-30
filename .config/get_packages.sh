@@ -20,7 +20,7 @@ marksman-bin
 zsh
 oh-my-zsh-git
 zsh-autosuggestions-git
-zsh-syntax-highlighting-git 
+zsh-syntax-highlighting-git
 zsh-theme-powerlevel10k
 
 zoxide
@@ -31,10 +31,13 @@ btop
 spotify-launcher
 rofi
 wezterm
+keepassxc
 
 otf-comicshanns-nerd
 "
 
 if [[ $HOSTNAME == $NOTEBOOK_HOSTNAME ]]; then
 	echo "acpi"
+else
+	echo "arandr"
 fi
