@@ -32,6 +32,7 @@ spotify-launcher
 rofi
 wezterm
 keepassxc
+kdeconnect
 
 otf-comicshanns-nerd
 "
