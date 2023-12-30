@@ -1,10 +1,16 @@
 #! /bin/sh
-/home/maks/.screenlayout/main_pc.sh
+source ~/.config/custom_vars.sh
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc wm -O VGA-0 VGA1
-bspc monitor 'VGA-0' -d '1' '2' '3' '4' '5'
-bspc monitor 'VGA-1-1' -d '6' '7' '8' '9' '10'
+if [[ $HOSTNAME == $PC_HOSTNAME ]]; then
+	/home/maks/.screenlayout/main_pc.sh
+	bspc wm -O VGA-0 VGA1
+	bspc monitor 'VGA-0' -d '1' '2' '3' '4' '5'
+	bspc monitor 'VGA-1-1' -d '6' '7' '8' '9' '10'
+else
+	bspc monitor -d '1' '2' '3' '4' '5' '6' '7' '8' '9' '10'
+fi
 
 bspc config border_width         1
 bspc config window_gap           8
@@ -20,7 +26,7 @@ bspc rule -a TelegramDesktop desktop='^8'
 bspc rule -a Spotify desktop='^9'
 bspc rule -a Pavucontrol state='floating'
 
-/home/maks/shit/ss.sh &
-feh --bg-fill ~/.config/wallpapers.png &
-/home/maks/.config/polybar/polybar.sh
+$SHIT_FOLDER/ss.sh &
+feh --bg-fill --randomize $WALLPAPERS_FOLDER/* &
+~/.config/polybar/polybar.sh
 setxkbmap -layout us,ru -option grp:win_space_toggle
