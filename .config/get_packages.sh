@@ -7,6 +7,7 @@ feh
 playerctl
 
 github-cli
+bat
 
 neovim
 fd
@@ -46,5 +47,8 @@ noto-fonts-emoji
 if [[ $HOSTNAME == $NOTEBOOK_HOSTNAME ]]; then
 	echo "acpi"
 else
-	echo "arandr numlockx"
+	echo "\
+arandr
+numlockx
+"
 fi

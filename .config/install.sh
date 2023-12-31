@@ -13,4 +13,4 @@ paru
 
 # installing everything
 # grep . removes blanklines. paru likes them very much. he wants to install them, but can not find any package named "" :(. very sad...
-~/.config/get_packages.sh | grep . | paru -S -
+~/.config/get_packages.sh | grep . | paru -S --needed -
