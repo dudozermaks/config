@@ -25,6 +25,7 @@ bspc config pointer_follows_focus true
 bspc rule -a TelegramDesktop desktop='^8'
 bspc rule -a Spotify desktop='^9'
 bspc rule -a Pavucontrol state='floating'
+bspc rule -a KeePassXC desktop='^5'
 
 $SHIT_FOLDER/ss.sh &
 feh --bg-fill --randomize $WALLPAPERS_FOLDER/* &
