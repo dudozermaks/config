@@ -27,7 +27,7 @@ Some additional scripts (located in `.config`):
 
 1. Download Arch image, burn it into the flash (or use [Ventoy](https://github.com/ventoy/Ventoy), multiple ISO images on one USB stick)
 2. Connect to Wi-Fi (if you use notebook)
-3. Launch `archinstall` and configure for your need (for Profile section I use Bspwm)
+3. Launch `archinstall` and configure for your need (for Profile section I use Bspwm, audio: pipewire)
 4. In additional packages you specify `git stow wezterm`
 5. Hit Install
 6. chrot in your system
