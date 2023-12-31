@@ -44,5 +44,5 @@ otf-comicshanns-nerd
 if [[ $HOSTNAME == $NOTEBOOK_HOSTNAME ]]; then
 	echo "acpi"
 else
-	echo "arandr"
+	echo "arandr numlockx"
 fi
