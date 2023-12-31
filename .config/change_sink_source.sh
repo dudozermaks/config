@@ -16,7 +16,7 @@ for i in "${!ports[@]}"; do
 		if [[ "$i" -ne $((${#ports[@]}-1)) ]]; then
 			next=$((i+1))
 		fi
-	break
+		break
 	fi
 done
 
