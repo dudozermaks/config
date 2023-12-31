@@ -1,15 +1,23 @@
 #! /bin/sh
 source ~/.config/custom_vars.sh
 
+# starting sxhkd - shortcut manager
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 if [[ $HOSTNAME == $PC_HOSTNAME ]]; then
+	# configure screens. This script was made with Arandr
 	/home/maks/.screenlayout/main_pc.sh
+	# listing monitors. VERY IMPORTANT FOR PROPER WORKSPACES CONFIGURATION
 	bspc wm -O VGA-0 VGA1
+
+	# specify which workspaces to pin to the monitors
 	bspc monitor 'VGA-0' -d '1' '2' '3' '4' '5'
 	bspc monitor 'VGA-1-1' -d '6' '7' '8' '9' '10'
+
+	# turn on numlock
 	numlockx on
 else
+	# specify workspaces
 	bspc monitor -d '1' '2' '3' '4' '5' '6' '7' '8' '9' '10'
 fi
 
@@ -20,15 +28,22 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
+# focus follows mouse
 bspc config focus_follows_pointer true
 bspc config pointer_follows_focus true
 
+# Telegram is on desktop 8
 bspc rule -a TelegramDesktop desktop='^8'
 bspc rule -a Spotify desktop='^9'
+# Pavucontrol is floating
 bspc rule -a Pavucontrol state='floating'
 bspc rule -a KeePassXC desktop='^5'
 
+# launch my own script not listed here. remove this line.
 $SHIT_FOLDER/ss.sh &
+# adding backgorund
 feh --bg-fill --randomize $WALLPAPERS_FOLDER/* &
+# laucnhing polybar
 ~/.config/polybar/polybar.sh
+# set keyboard layout. remove this line.
 setxkbmap -layout us,ru -option grp:win_space_toggle
