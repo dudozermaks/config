@@ -35,10 +35,12 @@ wezterm
 keepassxc
 kdeconnect
 bashmount
+pavucontrol
 
 shadowsocks-libev-static
 
 otf-comicshanns-nerd
+noto-fonts-emoji
 "
 
 if [[ $HOSTNAME == $NOTEBOOK_HOSTNAME ]]; then
