@@ -4,6 +4,7 @@ echo "\
 polybar
 xorg-xrandr
 feh
+playerctl
 
 github-cli
 
@@ -33,6 +34,9 @@ rofi
 wezterm
 keepassxc
 kdeconnect
+bashmount
+
+shadowsocks-libev-static
 
 otf-comicshanns-nerd
 "
