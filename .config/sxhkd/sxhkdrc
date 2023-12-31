@@ -136,3 +136,7 @@ XF86AudioPrev
 	playerctl previous
 XF86AudioNext
 	playerctl next
+
+@Print
+	scrot '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f' -s
+

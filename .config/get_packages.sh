@@ -8,6 +8,7 @@ playerctl
 
 github-cli
 bat
+scrot
 
 neovim
 fd
