@@ -1,0 +1,1 @@
+UUID=cd516ce1-1959-4fdc-80f6-c8537682a64c /home/maks/shit ext4 defaults  0      2
