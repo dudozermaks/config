@@ -11,6 +11,7 @@ playerctl
 github-cli
 bat
 eza
+unzip
 scrot
 
 neovim
