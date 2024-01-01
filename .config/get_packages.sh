@@ -23,9 +23,8 @@ ltex-ls-bin
 marksman-bin
 
 zsh
-oh-my-zsh-git
-zsh-autosuggestions-git
-zsh-syntax-highlighting-git
+zsh-autosuggestions
+zsh-syntax-highlighting
 zsh-theme-powerlevel10k
 
 zoxide
