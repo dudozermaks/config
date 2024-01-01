@@ -21,12 +21,28 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-export EDITOR='nvim'
+fpath=(/usr/share/zsh/site-functions $fpath)
 
-alias install_from_list="~/.config/get_packages.sh | grep . | paru -S --needed -"
+export EDITOR="nvim"
+
+alias paru_list="~/.config/get_packages.sh | grep . | paru -S --needed -"
 alias ls="eza"
 
 eval "$(zoxide init zsh)"
+
+export HISTFILE=$HOME/.zsh_history
+
+# How many commands zsh will load to memory.
+export HISTSIZE=10000
+
+# How many commands history will save on file.
+export SAVEHIST=10000
+
+# History won't save duplicates.
+setopt HIST_IGNORE_ALL_DUPS
+
+# History won't show duplicates on search.
+setopt HIST_FIND_NO_DUPS
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

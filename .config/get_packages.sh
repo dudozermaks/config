@@ -27,6 +27,7 @@ marksman-bin
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
+zsh-completions
 zsh-theme-powerlevel10k
 
 zoxide
