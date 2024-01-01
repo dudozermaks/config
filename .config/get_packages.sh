@@ -10,6 +10,7 @@ playerctl
 
 github-cli
 bat
+eza
 scrot
 
 neovim

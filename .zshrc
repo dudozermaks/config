@@ -24,6 +24,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export EDITOR='nvim'
 
 alias install_from_list="~/.config/get_packages.sh | grep . | paru -S --needed -"
+alias ls="eza"
+
 eval "$(zoxide init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
