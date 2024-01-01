@@ -3,6 +3,8 @@ source ~/.config/custom_vars.sh
 echo "\
 polybar
 xorg-xrandr
+dunst
+libnotify
 feh
 playerctl
 

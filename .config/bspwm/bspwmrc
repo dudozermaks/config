@@ -47,3 +47,5 @@ feh --bg-fill --randomize $WALLPAPERS_FOLDER/* &
 ~/.config/polybar/polybar.sh
 # set keyboard layout. remove this line.
 setxkbmap -layout us,ru -option grp:win_space_toggle
+# notification server
+dunst &

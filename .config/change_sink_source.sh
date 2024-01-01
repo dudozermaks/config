@@ -21,3 +21,5 @@ for i in "${!ports[@]}"; do
 done
 
 pactl set-sink-port $(pactl get-default-sink) ${ports[next]}
+# sending notification
+dunstify -a "changeSink" -u low "Changed sink to ${ports[next]}"
