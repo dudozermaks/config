@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Script switches default sink output to the next one. Made for PulseAudio
-# dependencies: awk, grep, pactl (as far as I know it comes with PulseAudio).
+# Script switches default sink output to the next one. Made for PulseAudio.
+# dependencies: grep, pactl (as far as I know it comes with PulseAudio).
 
 # This script was partially made using AI (I am newbie in bash). If you have any suggestions, feel free to share.
 
