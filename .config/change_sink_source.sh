@@ -7,7 +7,7 @@
 active_port=$(pactl list sinks | grep -m1 -oP '(?<=Active Port: ).*')
 
 # Read port names into an array
-mapfile -t ports < <(pactl list sinks | awk '/Ports:/,/Active Port:/' | grep -v 'Active Port:' | grep -oP 'analog-output-\w+')
+mapfile -t ports < <(pactl list sinks | grep -v 'Active Port:' | grep -oP 'analog-output-\w+')
 
 next=0
 
