@@ -53,6 +53,7 @@ require("lazy").setup({
 				dashboard.button("n", "📁 > New file", ":ene<CR>"),
 				dashboard.button("f", "🔎 > Find file", ":Telescope find_files<CR>"),
 				dashboard.button("r", "📝 > Recent", ":Telescope oldfiles<CR>"),
+				dashboard.button("l", "🔎 > Live Grep", ":Telescope live_grep<CR>"),
 			}
 
 			-- Send config to alpha
