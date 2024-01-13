@@ -7,7 +7,7 @@ fi
 
 export PATH=/opt/flutter/bin:/home/maks/.cargo/bin:$PATH
 
-export ANDROID_HOME=$HOME/android-sdk
+export ANDROID_HOME=$HOME/.android-sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 
@@ -20,6 +20,13 @@ plugins=(
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
 
 fpath=(/usr/share/zsh/site-functions $fpath)
 
@@ -43,6 +50,8 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # History won't show duplicates on search.
 setopt HIST_FIND_NO_DUPS
+
+zstyle ':completion:*' matcher-list 'l:|=* r:|=*'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
