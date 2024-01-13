@@ -1,5 +1,6 @@
 #! /bin/sh
 source ~/.config/custom_vars.sh
+source ~/.config/secret_vars.sh
 
 # starting sxhkd - shortcut manager
 pgrep -x sxhkd > /dev/null || sxhkd &
@@ -39,6 +40,8 @@ bspc rule -a Spotify desktop='^9'
 bspc rule -a Pavucontrol state='floating'
 bspc rule -a KeePassXC desktop='^5'
 
+# blue-light filter (based on coordinates from secret vars)
+redshift -l "$LATITUDE:$LONGITUDE" &
 # launch my own script not listed here. remove this line.
 $SHIT_FOLDER/ss.sh &
 # adding backgorund

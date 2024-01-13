@@ -6,6 +6,7 @@ xorg-xrandr
 dunst
 libnotify
 feh
+redshift
 playerctl
 
 github-cli
@@ -42,6 +43,7 @@ keepassxc
 kdeconnect
 bashmount
 pavucontrol
+vlc
 
 shadowsocks-libev-static
 
