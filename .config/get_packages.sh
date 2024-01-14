@@ -52,7 +52,9 @@ noto-fonts-emoji
 "
 
 if [[ $HOSTNAME == $NOTEBOOK_HOSTNAME ]]; then
-	echo "acpi"
+	echo "\
+acpi
+"
 else
 	echo "\
 arandr
