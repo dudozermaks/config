@@ -44,6 +44,7 @@ kdeconnect
 bashmount
 pavucontrol
 vlc
+simplescreenrecorder
 
 shadowsocks-libev-static
 
