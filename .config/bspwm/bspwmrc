@@ -13,7 +13,8 @@ if [[ $HOSTNAME == $PC_HOSTNAME ]]; then
 
 	# specify which workspaces to pin to the monitors
 	bspc monitor 'VGA-0' -d '1' '2' '3' '4' '5'
-	bspc monitor 'VGA-1-1' -d '6' '7' '8' '9' '10'
+	bspc monitor 'DP-2-3' -d '6' '7' '8' '9' '10'
+	# bspc monitor 'DVI-D-0' -d '11'
 
 	# turn on numlock
 	numlockx on
@@ -35,12 +36,22 @@ bspc config pointer_follows_focus true
 
 # Telegram is on desktop 8
 bspc rule -a TelegramDesktop desktop='^8'
+
+# monocycle layout for desktop 9
 bspc rule -a Spotify desktop='^9'
-# Pavucontrol is floating
-bspc rule -a Pavucontrol state='floating'
+bspc rule -a jamesdsp desktop='^9'
+
+bspc rule -a nekoray desktop='^5'
 bspc rule -a KeePassXC desktop='^5'
 
+# Pavucontrol is floating
+bspc rule -a Pavucontrol state='floating'
+# bspc rule -a yet_another_launcher state='floating'
+
+
 # blue-light filter (based on coordinates from secret vars)
+killall redshift
+killall redshift
 redshift -l "$LATITUDE:$LONGITUDE" &
 # launch my own script not listed here. remove this line.
 $SHIT_FOLDER/ss.sh &
@@ -52,3 +63,5 @@ feh --bg-fill --randomize $WALLPAPERS_FOLDER/* &
 setxkbmap -layout us,ru -option grp:win_space_toggle
 # notification server
 dunst &
+
+xdg-autostart &

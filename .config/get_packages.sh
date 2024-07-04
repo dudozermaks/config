@@ -8,6 +8,7 @@ libnotify
 feh
 redshift
 playerctl
+fzf
 
 github-cli
 bat
@@ -24,6 +25,9 @@ nodejs-emmet-ls
 python-lsp-server
 ltex-ls-bin
 marksman-bin
+bash-language-server
+gopls
+wgsl-analyzer
 
 zsh
 zsh-autosuggestions

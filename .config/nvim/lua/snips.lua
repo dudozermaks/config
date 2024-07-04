@@ -98,6 +98,21 @@ ls.add_snippets("rust", {
 					part2(&file);
 			}}
 
-		]], {i(1)}
+		]], { i(1) }
+	)),
+})
+
+ls.add_snippets("desktop", {
+	s("new", fmt(
+		[[
+[Desktop Entry]
+Name={}
+Exec={}
+Terminal=false
+Categories={}
+Type=Application
+StartupNotify=false
+X-GNOME-Autostart-enabled=true
+		]], { i(1), i(2), i(3) }
 	)),
 })

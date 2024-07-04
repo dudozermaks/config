@@ -7,7 +7,7 @@ end)
 
 -- When you don't have mason.nvim installed
 -- You'll need to list the servers installed in your system
-lsp.setup_servers({ "clangd", "lua_ls", "emmet_ls", "pylsp", "marksman", "dartls" })
+lsp.setup_servers({ "clangd", "lua_ls", "emmet_ls", "pylsp", "marksman", "dartls", "bashls", "gopls", "wgsl_analyzer"})
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
@@ -48,8 +48,10 @@ require('lspconfig').ltex.setup {
 require('lspconfig').gdscript.setup {
 	filetypes = { "gd", "gdscript", "gdscript3" },
 	on_attach = function(client, bufnr)
+		vim.api.nvim_command('echo serverstart("./godothost")')
 		vim.keymap.set('n', "<leader>ls", function() require 'dap'.continue() end, { desc = "Launch main scene" })
 	end,
+	cmd = vim.lsp.rpc.connect('127.0.0.1', 6005),
 	flags = { debounce_text_changes = 500 }
 }
 
@@ -69,6 +71,14 @@ dap.configurations.gdscript = {
 		launch_scene = true,
 	}
 }
+
+-- Configure wgsl filetype
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = "*.wgsl",
+  callback = function()
+    vim.bo.filetype = "wgsl"
+  end,
+})
 --       local MY_FQBN = "arduino:avr:nano"
 --       require("lspconfig").arduino_language_server.setup{
 --         cmd = {
