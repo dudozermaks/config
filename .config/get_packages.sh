@@ -60,6 +60,7 @@ if [[ $HOSTNAME == $NOTEBOOK_HOSTNAME ]]; then
 	echo "\
 acpi
 brightnessctl
+iwgtk
 "
 else
 	echo "\
