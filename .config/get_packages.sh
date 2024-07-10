@@ -28,6 +28,7 @@ marksman-bin
 bash-language-server
 gopls
 wgsl-analyzer
+rust-analyzer
 
 zsh
 zsh-autosuggestions
