@@ -34,9 +34,11 @@ Some additional scripts (located in `.config`):
 7. `cd /home/here_goes_your_username/` (username is `maks` in my case, not `root`!)
 8. `git clone https://github.com/dudozermaks/config.git` (or choose your own repo)
 9. `cd config`
-10. `stow .` (read about that one in Structure section)
-11. `exit`
-12. `reboot`
+10. `touch secret_vars.sh`
+11. `chmod 755 secret_vars.sh`
+12. `stow .` (read about that one in Structure section)
+13. `exit`
+14. `reboot`
 
 Now you have (almost) fully functional Bspwm setup.
 Then login to Bspwm session with your user credentials.
