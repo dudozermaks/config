@@ -2,6 +2,7 @@ local ls = require "luasnip"
 local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
+local f = ls.function_node
 local fmt = require("luasnip.extras.fmt").fmt
 
 ls.add_snippets("cpp", {
@@ -100,6 +101,68 @@ ls.add_snippets("rust", {
 
 		]], { i(1) }
 	)),
+	s("codeforces", fmt(
+		[[
+			use std::io;
+
+			fn main() {{
+				let mut buf = String::new();
+				io::stdin().read_line(&mut buf).unwrap();
+
+				let tests: usize = buf.trim().parse().unwrap();
+				for _ in 0..tests {{
+					buf.clear();
+					io::stdin().read_line(&mut buf).unwrap();
+					{}
+				}}
+			}}
+		]], { i(1) }
+	)),
+	s("in_one", fmt(
+		[[
+			buf.clear();
+			io::stdin().read_line(&mut buf).unwrap();
+			let {}: {} = buf.trim().parse().unwrap();
+		]], { i(1), i(2) }
+	)),
+	s("in_vec", fmt(
+		[[
+			buf.clear();
+			io::stdin().read_line(&mut buf).unwrap();
+			let {}: Vec<{}> = buf
+        .trim()
+        .{}()
+        .map(|x| {})
+        .collect();
+
+		]], { i(1), i(2), i(3), i(4) }
+	)),
+	s("in_mul", fmt(
+		[[
+			buf.clear();
+			io::stdin().read_line(&mut buf).unwrap();
+			let ({}) = {{
+				let mut buf = buf.split_whitespace().map(|x| x.trim());
+				(
+					buf.next().unwrap().parse::<{}>().unwrap(),
+				)
+			}};
+		]], { i(1), i(2) }
+	)),
+})
+
+local function copy(args)
+	return args[1]
+end
+ls.add_snippets("toml", {
+	s("prob", {
+		t("[[bin]]"),
+		t({'', 'name = "'}),
+		i(1),
+		t({'"', 'path = "src/'}),
+		f(copy, 1),
+		t('.rs"'),
+	}),
 })
 
 ls.add_snippets("desktop", {
