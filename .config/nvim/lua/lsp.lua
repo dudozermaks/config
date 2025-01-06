@@ -7,7 +7,7 @@ end)
 
 -- When you don't have mason.nvim installed
 -- You'll need to list the servers installed in your system
-lsp.setup_servers({ "clangd", "lua_ls", "emmet_ls", "pylsp", "marksman", "dartls", "bashls", "gopls", "wgsl_analyzer"})
+lsp.setup_servers({ "clangd", "lua_ls", "emmet_ls", "pylsp", "marksman", "dartls", "bashls", "gopls", "wgsl_analyzer", "ts_ls"})
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
