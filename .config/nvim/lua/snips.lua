@@ -111,13 +111,12 @@ ls.add_snippets("rust", {
 
 				let tests: usize = buf.trim().parse().unwrap();
 				for _ in 0..tests {{
-					buf.clear();
-					io::stdin().read_line(&mut buf).unwrap();
 					{}
 				}}
 			}}
 		]], { i(1) }
 	)),
+
 	s("in_one", fmt(
 		[[
 			buf.clear();
@@ -149,6 +148,26 @@ ls.add_snippets("rust", {
 			}};
 		]], { i(1), i(2) }
 	)),
+	s("tpu", {t("trim().parse().unwrap()")}),
+})
+
+ls.add_snippets("markdown", {
+  s("prob", fmt(
+    [[
+Difficulty: #r{}
+Status: #complete
+Topics: {}
+Tags: {}
+Time complexity: {}
+
+## Takeaways 
+{}
+## Analysis
+{}
+## Links
+{}
+    ]], { i(1), i(2), i(3), i(4), i(5), i(6), i(7) }
+    )),
 })
 
 local function copy(args)

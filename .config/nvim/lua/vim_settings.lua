@@ -79,3 +79,4 @@ vim.opt.smartindent = true    -- autoindent new lines
 
 vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
+vim.opt_local.conceallevel = 2

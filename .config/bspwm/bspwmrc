@@ -13,7 +13,7 @@ if [[ $HOSTNAME == $PC_HOSTNAME ]]; then
 
 	# specify which workspaces to pin to the monitors
 	bspc monitor 'VGA-0' -d '1' '2' '3' '4' '5'
-	bspc monitor 'DP-2-3' -d '6' '7' '8' '9' '10'
+	bspc monitor 'DP-1-3' -d '6' '7' '8' '9' '10'
 	# bspc monitor 'DVI-D-0' -d '11'
 
 	# turn on numlock
