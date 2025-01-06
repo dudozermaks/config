@@ -65,3 +65,9 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 autoload -U compinit && compinit
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/maks/.dart-cli-completion/zsh-config.zsh ]] && . /home/maks/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
