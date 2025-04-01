@@ -17,9 +17,6 @@ map('', '<up>', ':echoe "Use k"<CR>', { noremap = true, silent = false, desc = "
 map('', '<down>', ':echoe "Use j"<CR>', { noremap = true, silent = false, desc = "down!=j" })
 map('', '<left>', ':echoe "Use h"<CR>', { noremap = true, silent = false, desc = "left!=h" })
 map('', '<right>', ':echoe "Use l"<CR>', { noremap = true, silent = false, desc = "right!=l" })
--- ctrl s = save in normal and insert mode
-map("n", "<C-s>", "<cmd>w!<CR>", { desc = "Force write normal mode" })
-map("i", "<C-s>", "<cmd>w!<CR>", { desc = "Force write insert mode" })
 -- F-buttons
 ---@diagnostic disable-next-line: deprecated
 map('n', '<F1>', ':nohl<CR>', { unpack(default_opts), desc = "remove highlighting" })

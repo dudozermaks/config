@@ -7,7 +7,8 @@ end)
 
 -- When you don't have mason.nvim installed
 -- You'll need to list the servers installed in your system
-lsp.setup_servers({ "clangd", "lua_ls", "emmet_ls", "pylsp", "marksman", "dartls", "bashls", "gopls", "wgsl_analyzer", "ts_ls"})
+lsp.setup_servers({ "clangd", "lua_ls", "emmet_ls", "pylsp", "marksman", "dartls", "bashls", "gopls", "wgsl_analyzer",
+	"ts_ls" })
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
@@ -74,10 +75,10 @@ dap.configurations.gdscript = {
 
 -- Configure wgsl filetype
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = "*.wgsl",
-  callback = function()
-    vim.bo.filetype = "wgsl"
-  end,
+	pattern = "*.wgsl",
+	callback = function()
+		vim.bo.filetype = "wgsl"
+	end,
 })
 --       local MY_FQBN = "arduino:avr:nano"
 --       require("lspconfig").arduino_language_server.setup{
@@ -136,4 +137,3 @@ cmp.setup({
 })
 
 vim.loader.enable() -- for performance (cache)
-
