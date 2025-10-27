@@ -5,13 +5,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH=/opt/flutter/bin:/home/maks/.cargo/bin:$PATH
+# export PATH=/opt/flutter/bin:/home/maks/.cargo/bin:$PATH
 
 export ANDROID_HOME=$HOME/.android-sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 
-source "$HOME/.cargo/env"
+# source "$HOME/.cargo/env"
 
 plugins=(
 	git

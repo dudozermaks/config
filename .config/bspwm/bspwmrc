@@ -39,7 +39,7 @@ bspc rule -a TelegramDesktop desktop='^8'
 
 # monocycle layout for desktop 9
 bspc rule -a Spotify desktop='^9'
-bspc rule -a jamesdsp desktop='^9'
+bspc rule -a easyeffects desktop='^10'
 
 bspc rule -a nekoray desktop='^5'
 bspc rule -a KeePassXC desktop='^5'
@@ -60,8 +60,9 @@ feh --bg-fill --randomize $WALLPAPERS_FOLDER/* &
 # laucnhing polybar
 ~/.config/polybar/polybar.sh
 # set keyboard layout. remove this line.
-setxkbmap -layout us,ru -option grp:win_space_toggle
+# setxkbmap -layout us,ru -option grp:win_space_toggle
 # notification server
 dunst &
-
 xdg-autostart &
+killall udiskie
+udiskie --tray &

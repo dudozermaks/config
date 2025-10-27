@@ -55,6 +55,8 @@ shadowsocks-libev-static
 
 otf-comicshanns-nerd
 noto-fonts-emoji
+
+udiskie
 "
 
 if [[ $HOSTNAME == $NOTEBOOK_HOSTNAME ]]; then

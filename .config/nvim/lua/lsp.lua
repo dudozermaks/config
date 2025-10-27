@@ -7,15 +7,15 @@ end)
 
 -- When you don't have mason.nvim installed
 -- You'll need to list the servers installed in your system
-lsp.setup_servers({ "clangd", "lua_ls", "emmet_ls", "pylsp", "marksman", "dartls", "bashls", "gopls", "wgsl_analyzer",
+vim.lsp.enable({ "clangd", "lua_ls", "emmet_ls", "pylsp", "marksman", "dartls", "bashls", "gopls", "wgsl_analyzer",
 	"ts_ls" })
 -- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+vim.lsp.config("lua_ls", {lsp.nvim_lua_ls()})
 
 lsp.nvim_lua_ls()
 lsp.setup()
 
-require('lspconfig').rust_analyzer.setup {
+vim.lsp.config("rust_analyzer", {
 	settings = {
 		['rust-analyzer'] = {
 			imports = {
@@ -34,19 +34,19 @@ require('lspconfig').rust_analyzer.setup {
 			},
 		}
 	}
-}
-require("rust-tools").setup()
+})
+-- require("rust-tools").setup()
 
-require('lspconfig').ltex.setup {
+vim.lsp.config("ltex", {
 	filetypes = { "markdown", "text" },
 	on_attach = function(client, bufnr)
 		require("ltex_extra").setup {
 			path = ".ltex"
 		}
 	end,
-}
+})
 
-require('lspconfig').gdscript.setup {
+vim.lsp.config("gdscript", {
 	filetypes = { "gd", "gdscript", "gdscript3" },
 	on_attach = function(client, bufnr)
 		vim.api.nvim_command('echo serverstart("./godothost")')
@@ -54,7 +54,7 @@ require('lspconfig').gdscript.setup {
 	end,
 	cmd = vim.lsp.rpc.connect('127.0.0.1', 6005),
 	flags = { debounce_text_changes = 500 }
-}
+})
 
 
 dap.adapters.godot = {
