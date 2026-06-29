@@ -1,0 +1,5 @@
+require "plugins"
+require "lsp"
+require "keymaps"
+require ".config.nvim.lua.config.nvim_settings"lua.config.nvim_settings"
+require "snips"

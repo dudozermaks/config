@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=spotify
+Exec=/sbin/spotify
+Terminal=false
+Categories=Music
+Type=Application
+StartupNotify=false
+X-GNOME-Autostart-enabled=true
